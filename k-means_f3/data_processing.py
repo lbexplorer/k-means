@@ -7,7 +7,6 @@ def data_make(i):
     i = i[0].split()
     return i
 
-
 def get_data():
     path1 = os.getcwd()
     path2 = os.path.join(path1, 'text2.txt')
@@ -21,7 +20,6 @@ def get_data():
         data_result = get_array(tiket_id2_data_map)
         return data_result
 
-
 def get_array(tiket_id2_data_map):
     data_result = []
     for list_item in tiket_id2_data_map.keys():
@@ -33,12 +31,9 @@ def get_array(tiket_id2_data_map):
 def get_list(tiket):
     b = [0] * 1943
     for j in tiket:
-        print(j)
-        b[int(j) - 1] = 1
-    print(b)
+        b[int(j) - 1] =1
     b = np.array(b)
     return b
-
 
 def build_data(result, tiket_id2_data_map):
     if result[0] not in tiket_id2_data_map:
